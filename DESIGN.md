@@ -5,7 +5,7 @@
 
  Cette application à pour objectif de permettre la visualisation et l'édition de données sous la forme de diagrammes à bulles interactif. (<a href="#image">Voir image plus haut</a>) 
 
- Cet outils de visualisation prendra en entrée un fichier texte dans un format spécifique à l'outil et affichera le contenu de ce fichier sous la forme d'un diagramme à bulles.
+ Cet outil de visualisation prendra en entrée un fichier texte dans un format spécifique à l'outil et affichera le contenu de ce fichier sous la forme d'un diagramme à bulles.
 
 
 
@@ -15,14 +15,21 @@
   <img src="./docs/Use_Case_Diagram1.jpg" alt="Diagramme de cas d'utilisation">
 </p>
 
-Ce diagramme illustre les différentes actions, que peut faire l'utilisateur sur notre application. En effet l'utilisateur à la possibilité d'importer un fichier de type json ([fichier json](./docs/test_simple.json)) contenant les différente données à visualiser. Il a la possibilité de choisir un template (diagramme pré-conçu dans l'application) pour la visualisation. Cette application accorde la possibilité de manipuler les données, soit directement dans le fichier (lorsque l'utilisateur n'est pas connecté), soit en base de donnée. L'utilisateur peut donc modifier le texte contenu dans les bulles, ou les bulles elles-même (taille, couleur). Ensuite il a aussi la capcité de déployer ou de cacher les enfants d'une bulle parent, exporter sous forme de fichier texte, le sous enfant des bulles sélectionnées ou sous forme d'image le diagramme à bulle ne contenant que les bulles sélectionnées, ainsi que les bulles supérieurs qui les relies. Si l'utilisateur désir désir consulter son historique il doit impérativement se connecter. </p>
+Ce diagramme illustre les différentes actions, que peut faire l'utilisateur sur notre application. En effet l'utilisateur à la possibilité d'importer un fichier de type json ([fichier json](./docs/test_simple.json)) contenant les différente données à visualiser. 
+Il a la possibilité de choisir un template (diagramme pré-conçu dans l'application) pour la visualisation. Cette application accorde la possibilité de manipuler les données, soit directement dans le fichier (lorsque l'utilisateur n'est pas connecté), soit en base de donnée. L'utilisateur peut donc modifier le texte contenu dans les bulles, ou les bulles elles-même (taille, couleur).
+Ensuite il a aussi la capcité de déployer ou de cacher les enfants d'une bulle parent, exporter sous forme de fichier texte, le sous enfant des bulles sélectionnées ou sous forme d'image le diagramme à bulle ne contenant que les bulles sélectionnées, ainsi que les bulles supérieurs qui les relies. Si l'utilisateur désir désir consulter son historique il doit impérativement se connecter. </p>
 
 ## Diagramme de classe
 <p id="image" align="center">
   <img src="./docs/Class_Diagram.jpg" alt="Diagramme de classe">
 </p>
 
-Ce diagramme présente les différentes entités de notre application. Notre application possède cinq entités dont les data qui représente la donnée de chaque bulle. Elle est extraire du fichier importer par l'utilisateur. Ces données sont liées à un fichier et un fichier possède zéro ou plusieur données. Un utilisateur peut enregistrer zéro ou plusieurs fichier. Dans notre notre système nous proposons des modèle à l'utilisateur, ces modèles sont enregistrés dans la table diagramme. Un diagramme est lié à zéro ou plusieur fichier et un fichier est lié à zéro ou un diagramme 
+Ce diagramme présente les différentes entités de notre application. 
+Notre application possède cinq entités dont les data qui représente la donnée de chaque bulle. 
+Elle est extraire du fichier importer par l'utilisateur.
+Ces données sont liées à un fichier et un fichier possède zéro ou plusieur données. 
+Un utilisateur peut enregistrer zéro ou plusieurs fichier. 
+Dans notre notre système nous proposons des modèle à l'utilisateur, ces modèles sont enregistrés dans la table diagramme. Un diagramme est lié à zéro ou plusieur fichier et un fichier est lié à zéro ou un diagramme 
 
 ## Diagramme de séquence
 <p id="image" align="center">
