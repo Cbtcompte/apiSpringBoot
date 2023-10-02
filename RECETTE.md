@@ -1,4 +1,5 @@
 CAHIER DE RECETTE
+
 Version 1.0
 
 # 1- Introduction
@@ -12,6 +13,7 @@ Cette application a pour objectif de créer un outil qui permettra de visualiser
 + PDL.pdf
 + PDL.CDC
 + DESIGN.md
++ INSTALL.md
 
 # 2- Description de la fourniture
 Les livrables seront données sous deux formes :
@@ -102,4 +104,4 @@ Plusieurs tests seront effectués sur l'application afin de verifier sa conformi
 	- Cliquer sur **validate** : 
 
 ## 4-2- Test unitaire
-<je sais pas si il y'en a ou si on le fera <a voir>
+<sera défini plus tard >
