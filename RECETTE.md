@@ -3,7 +3,8 @@ CAHIER DE RECETTE
 Version 1.0
 
 # 1- Introduction
-Ce document vise à décrire le projet de manière global ainsi que les différents tests qui vont être effectués pour s'assurer du bon fonctionnement de l'application.
+Ce document vise à décrire le projet de manière global ainsi que les différents 
+tests qui vont être effectués pour s'assurer du bon fonctionnement de l'application.
 
 ## 1-1- Objectifs
 Cette application a pour objectif de créer un outil qui permettra de visualiser et d’éditer des données sous la forme de diagrammes à bulles interactif; En d'autres termes, l'utilisateur doit pouvoir à travers cette interface, entrer un fichier de type texte, et l'outil affichera le contenu du fichier sous forme d'un diagramme de bulles à niveau. 

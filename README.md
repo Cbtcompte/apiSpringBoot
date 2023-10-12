@@ -6,10 +6,13 @@ Version 1
 
 # Nom du Projet
 
-L'application Bubbles est une application de visualisation de donnée, permettant à toutes personne de visualiser ses donnée contenu dans un fichier json suivant un format bien définir 
+L'application Bubbles est une application de visualisation de données, permettant à toutes personnes de visualiser
+des données contenues dans un fichier json suivant un format bien défini. 
 ([Voir un exemple du fichier](./docs/test_simple.json)) 
-Avant l'importation du fichier, il sera demander à l'utilisateur si il voudrait mettre ses donnée public. Ceci permettra à d'autre utilisateur d'avoir une idée du visuelle que notre application propose lorsqu'il consulteroons les données public. L'application permettra d'interagir avec les données.
-En effet l'utilisateur aura la possibilité de choisir un model de diagramme ou utiliser les paramètre de visualisation définir dans son fichier json (taille, couleur, police, etc...).
+Avant l'importation du fichier, il sera demandé à l'utilisateur si il voudrait mettre ses données en
+public. Ceci permettra à d'autres utilisateurs d'avoir une idée du visuel que notre application propose
+lorsqu'ils consulterons les données public. L'application permettra à l'utilisateur  de choisir un modele
+de diagramme ou utiliser les paramètre de visualisation définir dans son fichier json (taille, couleur, police, etc...).
 Il peut donc modifier la couleur des bulles, la taille, la police, les libellés des bulles.
 
 ## Utilisation
@@ -17,13 +20,21 @@ Expliquez comment utiliser votre projet. Donnez des exemples concrets d'utilisat
 si pertinentes et des détails sur les fonctionnalités disponibles.
 
 ### Fichier
-Le fichier à charger est de type JSON
+Le fichier à charger est de type JSON.
 
 ### Diagramme à bulles
+Nous utiliserons de 
 Couleurs 
 Formes 
 Polices 
 
+## Documents de references
+
++ PDL.pdf
++ PDL.CDC
++ DESIGN.md
++ RECETTE.md
++ INSTALL.md
 ## Technologies 
 
 - Back end : SPRING BOOT 
