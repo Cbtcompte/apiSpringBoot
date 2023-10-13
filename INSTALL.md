@@ -43,12 +43,8 @@ mvn test
 
 ### Exécution du Logiciel
 
-Pour exécuter le programme, vous avez deux options :
-
-1. Allez dans la classe `Application.java` du projet et exécutez-la en tant qu'application Java depuis votre IDE.
-2. Utilisez la commande `java -jar` en remplaçant `nom-du-fichier-jar.jar` par le nom de votre fichier JAR généré.
-
-
+Pour exécuter le programme allez dans la classe `Application.java` du projet et exécutez-la en tant qu'application Java depuis votre IDE.
+Pour arreter le programme, appuyez sur le bouton rouge.
 ## Support
 
 Si vous avez des questions ou des préoccupations, n'hésitez pas à contacter l'un des membres du groupe sur Teams ou par e-mail :
