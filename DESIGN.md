@@ -8,14 +8,12 @@ Version 1.0
 
  Cette application a pour objectif de permettre la visualisation et l'édition des données sous la forme de diagrammes à bulles interactif. (<a href="#image">Voir image plus haut</a>) 
 
- Cet outils de visualisation prendra en entrée un fichier texte dans un format spécifique à l'outil et affichera le contenu de ce fichier sous la forme d'un diagramme à bulles.
+ Cet outil de visualisation prendra en entrée un fichier texte dans un format spécifique à l'outil et affichera le contenu de ce fichier sous la forme d'un diagramme à bulles.
 
 ## Documentation du projet
-Bubbles est une application de visualisation de données, permettant à toutes personnes de visualiser des données contenues dans un fichier json suivant un format bien défini ([Voir un exemple du fichier](./docs/test_simple.json)). 
+Bubbles est une application de visualisation des données contenues dans un fichier json préalablement importé par l'utilisateur. Elle donne la possibilité à l'utilisateur d'interagir avec les bulles (représentation des données), en modifiant soit la couleur, la taille, la police et les libellés des bulles. Elle propose aussi à l'utilisateur un ensemble de modèle de diagramme (template) pour la visualisation des données. <p id="param">Ce dernier à donc le choix entre les modèles proposés par l'application ou utiliser les paramètres (couleur, taille, police) de visualisation définis dans son fichier json (taille, couleur, police, etc...).</p>
 
-Avec cette application, l'utilisateur à la possibilité d'interagir avec les bulles, en modifiant soit la couleur, la taille, la police, les libellés des bulles. Il peut aussi choisir un modèle de diagramme ou utiliser les paramètres de visualisation définir dans son fichier json (taille, couleur, police, etc...).
-  
-Pour ce qui est de l'importation du fichier, il sera demandé à l'utilisateur s'il voudrait mettre les données en public, afin de permettre à d'autres utilisateurs d'avoir une idée du visuel que l'application propose.
+<strong style="text-decoration : underline">NB</strong> : Le fichier doit être dans un format bien défini ([Voir un exemple du fichier](./docs/test_simple.json))
 
 ### Présentation de quelques interfaces
 <p id="image" align="center" style="display:flex">
@@ -31,11 +29,17 @@ Pour ce qui est de l'importation du fichier, il sera demandé à l'utilisateur s
   <img src="./docs/Use_Case_Diagram1.jpg" alt="Diagramme de cas d'utilisation">
 </p>
 
-Ce diagramme illustre les différentes actions, que peut faire l'utilisateur sur notre application. En effet, l'utilisateur a la possibilité d'importer un fichier de type json ([fichier json](./docs/test_simple.json)) contenant les différentes données à visualiser. Il a la possibilité de choisir un template (diagramme pré-conçu dans l'application) pour la visualisation des données.
+Ce diagramme illustre les différentes fonctionnalités de l'application Bubbles. 
 
-Cette application accorde la possibilité de manipuler les données, soit directement dans le fichier (lorsque l'utilisateur n'est pas connecté), soit en base de données. L'utilisateur peut donc modifier le texte contenu dans les bulles, ou les bulles elles-mêmes (taille, couleur). 
+<!-- En effet, l'utilisateur a la possibilité d'importer un fichier json (suivant le format recommandé [fichier json](./docs/test_simple.json)) contenant les données à visualiser. Il peut choisir un template/modèle de diagramme (diagramme pré-conçu dans l'application) pour la visualisation des données. -->
 
-Ensuite, il a aussi la capacité de déployer ou de cacher les enfants d'une bulle parente, exporter sous forme de fichier texte, le sous-enfant des bulles sélectionnées ou sous forme d'image le diagramme à bulle ne contenant que les bulles sélectionnées, ainsi que les bulles supérieures qui les relient. Si l'utilisateur désire consulter son historique, il doit impérativement se connecter. </p>
+La fonctionnalité <strong>importer un fichier</strong> permet a l'utilisateur de charger son fichier json (suivant le format recommandé [fichier json](./docs/test_simple.json)) contenant les données à visualiser. Il peut choisir un template/modèle de diagramme (diagramme pré-conçu dans l'application) pour la visualisation des données ou utiliser les paramètres de base contenu dans son fichier (<a href="#param">Voir la documentation</a>).
+
+<strong>La manipulation des données</strong> se fait, soit directement dans le fichier (lorsque l'utilisateur n'est pas connecté), soit en base de données. L'utilisateur peut donc modifier le texte (police, libellé) contenu dans les bulles ou les bulles elles-mêmes (taille, couleur). 
+
+Ensuite, il a la possibilité de <strong>déployer ou de cacher</strong> les enfants d'une bulle parente, <strong>exporter</strong> sous forme de fichier texte le sous-enfant des bulles sélectionnées ou sous forme d'image le diagramme à bulle ne contenant que les bulles sélectionnées, ainsi que les bulles supérieures qui les relient. 
+
+Il peut aussi <strong>consulter son historique</strong> (les données issues des fichiers importés précédemment). Cette fonctionnalité nécessite la connexion de l'utilisateur. </p>
 
 ## Diagramme de classe
 <p id="image" align="center">

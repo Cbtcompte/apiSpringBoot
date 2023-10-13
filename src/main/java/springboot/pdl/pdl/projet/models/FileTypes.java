@@ -1,5 +1,6 @@
 package springboot.pdl.pdl.projet.models;
 
+import java.util.Iterator;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -46,8 +47,8 @@ public class FileTypes extends AbstractClass{
         this.designation = designation;
     }
 
-    public List<Files> getFile() {
-        return this.file;
+    public Iterator<Files> getFile() {
+        return this.file.iterator();
     }
 
     public void setFile(List<Files> file) {

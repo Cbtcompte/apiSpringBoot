@@ -1,6 +1,7 @@
 package springboot.pdl.pdl.projet.models;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -88,8 +89,8 @@ public class Files extends AbstractClass {
         this.user = user;
     }
 
-    public List<Diagramme> getDiagrammes() {
-        return this.diagrammes;
+    public Iterator<Diagramme> getDiagrammes() {
+        return this.diagrammes.iterator();
     }
 
     public void setDiagrammes(List<Diagramme> diagrammes) {
