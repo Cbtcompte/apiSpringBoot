@@ -23,10 +23,13 @@ si pertinentes et des détails sur les fonctionnalités disponibles.
 Le fichier à charger est de type JSON.
 
 ### Diagramme à bulles
-Nous utiliserons de 
-Couleurs 
-Formes 
-Polices 
+Nous utiliserons des librairies pour gérer tout ce qui concerne:
+
+-Couleurs (diagramme, bulles, texte)
+
+-Formes (forme des bulles rectangle, caré, rond etc...)
+
+-Polices (police du text contenu dans les bulles)
 
 ## Documents de references
 
