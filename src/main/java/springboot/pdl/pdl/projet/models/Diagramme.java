@@ -10,6 +10,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
@@ -36,11 +37,11 @@ public class Diagramme extends AbstractClass{
     private List<Files> files;
     
 
-    public Diagramme(String couleur, String police, float taille) {
-        this.couleur = couleur;
-        this.police = police;
-        this.taille = taille;
-    }
+    // public Diagramme(String couleur, String police, float taille) {
+    //     this.couleur = couleur;
+    //     this.police = police;
+    //     this.taille = taille;
+    // }
 
 
     public String getCouleur() {
@@ -74,5 +75,4 @@ public class Diagramme extends AbstractClass{
     public void setFiles(List<Files> files) {
         this.files = files;
     }
-
 }

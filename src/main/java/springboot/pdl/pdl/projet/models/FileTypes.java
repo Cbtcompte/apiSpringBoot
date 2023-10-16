@@ -7,6 +7,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,12 +24,12 @@ public class FileTypes extends AbstractClass{
     private String designation;
 
     @OneToMany(mappedBy = "fileType")
-    private List<Files> file;
+    private List<Files> files;
 
-    public FileTypes(String extension, String designation) {
-        this.extension = extension;
-        this.designation = designation;
-    }
+    // public FileTypes(String extension, String designation) {
+    //     this.extension = extension;
+    //     this.designation = designation;
+    // }
 
 
     public String getExtension() {
@@ -48,11 +49,11 @@ public class FileTypes extends AbstractClass{
     }
 
     public Iterator<Files> getFile() {
-        return this.file.iterator();
+        return this.files.iterator();
     }
 
     public void setFile(List<Files> file) {
-        this.file = file;
+        this.files = file;
     }
     
 }
