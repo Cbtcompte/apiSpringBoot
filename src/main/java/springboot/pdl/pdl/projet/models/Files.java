@@ -11,6 +11,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -29,13 +30,13 @@ public class Files extends AbstractClass {
     @Column(name = "visibility")
     private Boolean visibility;
 
-    public Files(String nom, Float taille, Boolean visibility) {
-        this.nom = nom;
-        this.taille = taille;
-        this.visibility = visibility;
-    }
+    // public Files(String nom, Float taille, Boolean visibility) {
+    //     this.nom = nom;
+    //     this.taille = taille;
+    //     this.visibility = visibility;
+    // }
 
-    @OneToMany(mappedBy = "file")
+    @OneToMany(mappedBy = "files")
     private List<Bubble> bubbles = new ArrayList<Bubble>();
 
     @ManyToOne

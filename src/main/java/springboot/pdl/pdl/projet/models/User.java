@@ -7,6 +7,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -25,18 +26,21 @@ public class User extends AbstractClass{
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+    @Column(name = "password", nullable = false, unique = true)
+    private String password;
+
     @Column(name = "telephone", nullable = false, unique = true)
     private String telephone;
 
     @OneToMany(mappedBy = "user")
     private List<Files> files;
 
-    public User(String nom, String prenom, String email, String telephone) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.telephone = telephone;
-    }
+    // public User(String nom, String prenom, String email, String telephone) {
+    //     this.nom = nom;
+    //     this.prenom = prenom;
+    //     this.email = email;
+    //     this.telephone = telephone;
+    // }
 
 
     public String getNom() {
@@ -77,6 +81,14 @@ public class User extends AbstractClass{
 
     public void setFiles(List<Files> files) {
         this.files = files;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }

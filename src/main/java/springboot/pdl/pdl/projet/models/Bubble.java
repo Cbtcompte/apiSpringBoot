@@ -6,6 +6,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -27,14 +28,6 @@ public class Bubble extends AbstractClass{
     @Column(name = "taille") 
     private float taille;
 
-    public Bubble(String libelle, String couleur, String police, float taille) {
-        this.libelle = libelle;
-        this.couleur = couleur;
-        this.police = police;
-        this.taille = taille;
-
-    }
-
     @OneToOne(optional = true)
     @JoinColumn(
         name="parent_id", referencedColumnName = "id", unique=true, nullable=true, updatable=true)
@@ -43,7 +36,6 @@ public class Bubble extends AbstractClass{
     @ManyToOne
     @JoinColumn(name = "file_id")
     private Files file;
-
 
     public String getLibelle() {
         return this.libelle;
