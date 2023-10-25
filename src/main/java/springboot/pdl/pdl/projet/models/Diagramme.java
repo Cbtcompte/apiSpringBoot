@@ -34,14 +34,6 @@ public class Diagramme extends AbstractClass{
         inverseJoinColumns = @JoinColumn(name = "file_id")
     )
     private List<Files> files;
-    
-
-    // public Diagramme(String couleur, String police, float taille) {
-    //     this.couleur = couleur;
-    //     this.police = police;
-    //     this.taille = taille;
-    // }
-
 
     public String getCouleur() {
         return this.couleur;
