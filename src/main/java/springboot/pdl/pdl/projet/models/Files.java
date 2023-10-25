@@ -11,10 +11,8 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.stereotype.Service;
 
 @Data
 @Entity
@@ -37,12 +35,8 @@ public class Files extends AbstractClass {
     //     this.visibility = visibility;
     // }
 
-    @OneToMany(mappedBy = "files")
+    @OneToMany(mappedBy = "file")
     private List<Bubble> bubbles = new ArrayList<Bubble>();
-
-    @ManyToOne
-    @JoinColumn(name = "fileTypes_id")
-    private FileTypes fileType;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -73,14 +67,6 @@ public class Files extends AbstractClass {
 
     public void setBubble(List<Bubble> bubble) {
         this.bubbles = bubble;
-    }
-
-    public FileTypes getFileTypes() {
-        return this.fileType;
-    }
-
-    public void setFileTypes(FileTypes fileTypes) {
-        this.fileType = fileTypes;
     }
 
     public User getUser() {
