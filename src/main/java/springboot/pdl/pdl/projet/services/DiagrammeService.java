@@ -29,7 +29,7 @@ public class DiagrammeService implements AbstractService<DiagrammeDto, Long>{
 
     /**
      * Cette méthode permet d'enregistrer yn diagramme dans la base de données
-     * @param DiagrammeDto
+     * @param dto
      * @return Diagramme instance
      */
     @Override
