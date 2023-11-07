@@ -11,8 +11,10 @@ public class DiagrammeValidator {
         Map<String, String> errors = new HashMap<>();
 
         if(diagrammeDto == null){
+
             errors.put("message", "Veuillez renseignez les champs du formulaire");
         }else{
+
             if(!StringUtils.hasLength(diagrammeDto.getCouleur())){
                 errors.put("couleur", "Ce champs est obligatoire");
             }
