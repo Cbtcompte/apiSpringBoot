@@ -9,9 +9,9 @@ import java.util.List;
 public class FilesValidator {
     public static List<String> validate(FilesDto filedto){
         List<String> errors = new ArrayList<>();
-        if (StringUtils ){
+        /*if (StringUtils ){
             errors.add("Veuillez renseigner les informations du fichier");
-        }
+        }*/
         return  errors;
     }
 }

@@ -14,22 +14,17 @@ public class BubbleService implements AbstractService<Bubble, BubbleDto> {
    }
 
     @Override
-    public Bubble create(BubbleDto bubbleDto) {
+    public Bubble create(Bubble bubble) {
         return null;
     }
 
     @Override
-    public Bubble delete(BubbleDto bubbleDto) {
+    public Bubble findById(BubbleDto v) {
         return null;
     }
 
     @Override
-    public Bubble read(BubbleDto bubbleDto) {
-        return null;
-    }
-
-    @Override
-    public Bubble update(BubbleDto bubbleDto) {
+    public Bubble findAll(Bubble bubble) {
         return null;
     }
 }

@@ -10,6 +10,7 @@ import springboot.pdl.pdl.projet.models.Files;
 import springboot.pdl.pdl.projet.services.FileService;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.zip.Deflater;
@@ -25,7 +26,7 @@ public class FileController {
 
     @PostMapping
     public ResponseEntity<?> uploadFile(@RequestParam("fichier") Files file) throws IOException {
-        String uploadFile = fileService.uploadFile((MultipartFile) file);
+        String uploadFile = fileService.uploadFile((Files) file);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(uploadFile);
     }
@@ -41,7 +42,7 @@ public class FileController {
 
     @PostMapping
     public ResponseEntity<?> uploadFileToSystem(@RequestParam("fichier") Files file) throws IOException {
-        String uploadFile = fileService.uploadFileToSystem((MultipartFile) file);
+        String uploadFile = fileService.uploadFileToSystem(file);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(uploadFile);
     }

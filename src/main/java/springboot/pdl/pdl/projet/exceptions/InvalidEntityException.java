@@ -1,29 +1,34 @@
 package springboot.pdl.pdl.projet.exceptions;
 
-import java.util.List;
-
+import java.util.Map;
 import java.util.Iterator;
 
 public class InvalidEntityException extends RuntimeException{
     
     private ErrorCodes errorCodes;
-    private List<String> messageErrors;
+    private Map<String, String> messageErrors;
 
-    InvalidEntityException(String message, Throwable cause){
+    public InvalidEntityException(String message, Throwable cause){
         super(message, cause);
     }
 
-    InvalidEntityException(String message){
+    public InvalidEntityException(String message){
         super(message);
     }
 
-    InvalidEntityException(String message, Throwable cause, ErrorCodes _errorCodes){
+    public InvalidEntityException(String message, Throwable cause, ErrorCodes _errorCodes){
         super(message, cause);
         this.errorCodes = _errorCodes;
     }
 
-    InvalidEntityException(String message, Throwable cause, ErrorCodes _errorCodes, List<String> _messageError){
+    public InvalidEntityException(String message, Throwable cause, ErrorCodes _errorCodes, Map<String, String> _messageError){
         super(message, cause);
+        this.errorCodes = _errorCodes;
+        this.messageErrors = _messageError;
+    }
+
+    public InvalidEntityException(String message, ErrorCodes _errorCodes, Map<String, String> _messageError){
+        super(message);
         this.errorCodes = _errorCodes;
         this.messageErrors = _messageError;
     }
@@ -38,10 +43,10 @@ public class InvalidEntityException extends RuntimeException{
     }
 
     public Iterator<String> getMessageErrors() {
-        return this.messageErrors.iterator();
+        return this.messageErrors.values().iterator();
     }
 
-    public void setMessageErrors(List<String> messageErrors) {
+    public void setMessageErrors(Map<String, String> messageErrors) {
         this.messageErrors = messageErrors;
     }
 

@@ -19,7 +19,7 @@ public class DiagrammeDto{
     @JsonIgnore
     private List<FilesDto> files;
   
-    public DiagrammeDto fromEntity(Diagramme diagramme)
+    public static DiagrammeDto fromEntity(Diagramme diagramme)
     {
         if(diagramme == null){
             return null;
@@ -33,7 +33,7 @@ public class DiagrammeDto{
                 .build();
     }
 
-    public  Diagramme toEntity(DiagrammeDto diagrammeDto){
+    public static  Diagramme toEntity(DiagrammeDto diagrammeDto){
         if(diagrammeDto == null){
             return null;
         }
