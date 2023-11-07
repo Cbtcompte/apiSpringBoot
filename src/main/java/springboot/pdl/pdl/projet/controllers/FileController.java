@@ -24,35 +24,35 @@ public class FileController {
         this.fileService = fileService;
     }
 
-    @PostMapping
-    public ResponseEntity<?> uploadFile(@RequestParam("fichier") Files file) throws IOException {
-        String uploadFile = fileService.uploadFile((Files) file);
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(uploadFile);
-    }
+    // @PostMapping
+    // public ResponseEntity<?> uploadFile(@RequestParam("fichier") Files file) throws IOException {
+    //     String uploadFile = fileService.uploadFile((Files) file);
+    //     return ResponseEntity.status(HttpStatus.OK)
+    //             .body(uploadFile);
+    // }
 
-    @GetMapping
-    public ResponseEntity<?> downloadFile(@PathVariable String filePath) throws IOException {
-        Optional<byte[]> fichier = Optional.ofNullable(fileService.downloadFile(filePath));
-        return ResponseEntity.status(HttpStatus.OK)
-                .contentType(MediaType.valueOf("fichier/json"))
-                .body(fichier);
-    }
+    // @GetMapping
+    // public ResponseEntity<?> downloadFile(@PathVariable String filePath) throws IOException {
+    //     Optional<byte[]> fichier = Optional.ofNullable(fileService.downloadFile(filePath));
+    //     return ResponseEntity.status(HttpStatus.OK)
+    //             .contentType(MediaType.valueOf("fichier/json"))
+    //             .body(fichier);
+    // }
 
 
-    @PostMapping
-    public ResponseEntity<?> uploadFileToSystem(@RequestParam("fichier") Files file) throws IOException {
-        String uploadFile = fileService.uploadFileToSystem(file);
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(uploadFile);
-    }
+    // @PostMapping
+    // public ResponseEntity<?> uploadFileToSystem(@RequestParam("fichier") Files file) throws IOException {
+    //     String uploadFile = fileService.uploadFileToSystem(file);
+    //     return ResponseEntity.status(HttpStatus.OK)
+    //             .body(uploadFile);
+    // }
 
-    @GetMapping
-    public ResponseEntity<?> downloadFileFromSystem(@PathVariable String filePath) throws IOException {
-        Optional<byte[]> fichier = Optional.ofNullable(fileService.downloadFileFromSystem(filePath));
-        return ResponseEntity.status(HttpStatus.OK)
-                .contentType(MediaType.valueOf("fichier/json"))
-                .body(fichier);
-    }
+    // @GetMapping
+    // public ResponseEntity<?> downloadFileFromSystem(@PathVariable String filePath) throws IOException {
+    //     Optional<byte[]> fichier = Optional.ofNullable(fileService.downloadFileFromSystem(filePath));
+    //     return ResponseEntity.status(HttpStatus.OK)
+    //             .contentType(MediaType.valueOf("fichier/json"))
+    //             .body(fichier);
+    // }
 
 }
