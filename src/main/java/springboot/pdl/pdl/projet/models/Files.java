@@ -12,12 +12,14 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
+@Builder
 @Table(name = "files")
 public class Files extends AbstractClass {
 
@@ -60,7 +62,6 @@ public class Files extends AbstractClass {
     public Float getTaille() {
         return this.taille;
     }
-
     public void setTaille(Float taille) {
         this.taille = taille;
     }
@@ -89,5 +90,19 @@ public class Files extends AbstractClass {
         this.diagrammes = diagrammes;
     }
 
+    public String getPath(){
+        return this.path_file;
+    }
 
+    public void setPath_file(String path_file) {
+        this.path_file = path_file;
+    }
+
+    public Boolean getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(Boolean visibility) {
+        this.visibility = visibility;
+    }
 }

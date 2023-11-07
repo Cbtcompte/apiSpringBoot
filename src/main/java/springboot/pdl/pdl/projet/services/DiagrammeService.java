@@ -1,10 +1,12 @@
 package springboot.pdl.pdl.projet.services;
 
+
 import java.util.Map;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import springboot.pdl.pdl.projet.dtos.DiagrammeDto;
 import springboot.pdl.pdl.projet.exceptions.ErrorCodes;
 import springboot.pdl.pdl.projet.exceptions.InvalidEntityException;
@@ -13,14 +15,13 @@ import springboot.pdl.pdl.projet.exceptions.EntityNotFoundException;
 import springboot.pdl.pdl.projet.repository.DiagrammeRepository;
 import springboot.pdl.pdl.projet.services.interfaces.AbstractService;
 import springboot.pdl.pdl.projet.validators.DiagrammeValidator;
-
+@Service
 public class DiagrammeService implements AbstractService<DiagrammeDto, Long>{
     
-    @Autowired
-    private DiagrammeRepository diagrammeRepository;
+@Autowired
+private DiagrammeRepository diagrammeRepository;
 
-    @Autowired
-    private DiagrammeValidator diagrammeValidator;
+    private  DiagrammeValidator diagrammeValidator;
 
 
     public DiagrammeService(){

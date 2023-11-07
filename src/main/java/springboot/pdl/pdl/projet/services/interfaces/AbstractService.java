@@ -6,6 +6,7 @@ public interface AbstractService<V, I> {
      * @param v
      * @return Diagramme instance
      */
+
     public V create(V v);
 
     public V findById(I v);
