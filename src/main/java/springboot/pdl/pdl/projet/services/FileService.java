@@ -21,54 +21,6 @@ public class FileService {
         this.fileRepository = fileRepository;
     }
 
-    public String uploadFile(Files file) throws IOException{
-        Optional<Files> files = Optional.of(fileRepository.save(Files.builder()
-                .nom(file.getNom())
-                .bubbles(file.getBubbles())
-                .taille(file.getTaille())
-                .visibility(file.getVisibility())
-                .path_file(file.getPath_file())
-                .build()));
-
-        if (file != null){
-            return "Fichier bien chargé : " + file.getNom();
-        }
-        return  null;
-
-
-    }
-    public byte[] downloadFile(String filename){
-        Optional<Files> dbFile = fileRepository.findByNom(filename);
-        byte [] file = dbFile.get().getPath_file().getBytes();
-        return file;
-    }
-    public String uploadFileToSystem(Files file) throws IndexOutOfBoundsException{
-        String  filepath= FOLDER_PATH+file.getNom();
-       /* if (file != null){
-            file.transferTo(new File(filepath));
-        }*/
-        Files fichier =  fileRepository.save(Files.builder()
-                .nom(file.getNom())
-                .taille(file.getTaille())
-                .visibility(file.getVisibility())
-                .path_file(filepath)
-                .build());
-       if(fichier != null) {
-           return "Fichier ajouté avec succes : " + filepath;
-       }
-       return null;
-    }
-
-    public byte[] downloadFileFromSystem(String fileName) throws IndexOutOfBoundsException, IOException {
-        Optional<Files> bdFiles = fileRepository.findByNom(fileName);
-        String filepath = bdFiles.get().getPath_file();
-        byte [] file = java.nio.file.Files.readAllBytes(new File(filepath).toPath());
-        return file;
-    }
-
-
-
-
 
 }
 
