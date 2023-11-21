@@ -76,13 +76,13 @@ public class FilesDto {
             return null;
         }
 
-        Files files = new Files();
+        Files files = new Files( nom, true);
         files.setId(filesDto.getId());
         files.setNom(filesDto.getNom());
         files.setVisibility(filesDto.getVisibility());
         files.setPath_file(filesDto.getPath_file());
         files.setTaille(filesDto.getTaille());
-        
+
         return files;
     }
 }
