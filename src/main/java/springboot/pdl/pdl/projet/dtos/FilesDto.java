@@ -76,7 +76,7 @@ public class FilesDto {
             return null;
         }
 
-        Files files = //new Files();
+        Files files = new Files( nom, true);
         files.setId(filesDto.getId());
         files.setNom(filesDto.getNom());
         files.setVisibility(filesDto.getVisibility());
@@ -85,6 +85,4 @@ public class FilesDto {
 
         return files;
     }
-
-
 }
