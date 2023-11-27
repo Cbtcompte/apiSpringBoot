@@ -1,5 +1,6 @@
 package springboot.pdl.pdl.projet.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import springboot.pdl.pdl.projet.models.Files;
@@ -14,17 +15,17 @@ import java.util.List;
 @RequestMapping(path = "/api", consumes = MediaType.ALL_VALUE)
 
 public class FileChargementController {
+
+    //@Autowired
     private final FileService fileService;
 
     public FileChargementController(FileService fileService) {
-
         this.fileService = fileService;
     }
 
     @PostMapping(path = "/uploadfilesystem", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.ALL_VALUE)
     public void uploadfileSystem(@RequestParam("file")MultipartFile file ) throws IllegalStateException, IOException{
         fileService.uploadFileSystem(file);
-        System.out.println("cocuoicvzdafdiugdsifhj");
     }
 
     @PostMapping(path = "/uploadfilebase", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.ALL_VALUE)

@@ -1,6 +1,6 @@
 DESIGN 
 
-Version 1.0
+Version 2
 
 <p id="image" align="center">
   <img src="../projet_pdl.png" alt="Présentation du projet">

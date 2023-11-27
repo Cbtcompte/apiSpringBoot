@@ -16,12 +16,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-
 @Service
+
 public class FileService {
-    @Autowired
+  //  @Autowired
     private final FileRepository fileRepository;
     public FileService( FileRepository fileRepository){
+
         this.fileRepository = fileRepository;
     }
 
