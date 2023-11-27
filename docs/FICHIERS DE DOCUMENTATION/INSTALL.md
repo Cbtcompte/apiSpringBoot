@@ -1,6 +1,6 @@
 INSTALL
 
-Version 1.0
+Version 2
 
 Ce document a pour objectif de fournir des instructions claires sur la construction, les tests et l'exécution du projet à partir du code source.
 
@@ -13,6 +13,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 - Java JDK 8 ou version supérieure
 - Maven 3.x
 - Git
+- Xamp ou Wamp
 
 ### Récupération du Code Source
 
@@ -39,12 +40,14 @@ Pour exécuter les tests, utilisez la commande suivante :
 mvn test
 ```
 
-<!-- Si d'autres tests ou commandes sont nécessaires, ajoutez-les ici. -->
-
 ### Exécution du Logiciel
 
-Pour exécuter le programme allez dans la classe `Application.java` du projet et exécutez-la en tant qu'application Java depuis votre IDE.
-Pour arreter le programme, appuyez sur le bouton rouge.
+Pour exécuter le programme, 
+- Commencez par lancer XAMP ou WAMP avec les options MYSQL et APACHE activées
+- Ensuite, allez dans la classe `Application.java` du projet 
+- Exécutez-la en tant qu'application Java depuis votre IDE.
+Pour arrêter le programme, appuyez sur le bouton carré rouge et arrêtez XAMP ou WAMP.
+
 ## Support
 
 Si vous avez des questions ou des préoccupations, n'hésitez pas à contacter l'un des membres du groupe sur Teams ou par e-mail :

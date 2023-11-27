@@ -9,6 +9,9 @@ import java.util.Optional;
 
 public interface FileRepository extends JpaRepository<Files, Long> {
      Optional<Files> findByNom(String nom);
-     Optional<Files> findByPath_file(String path);
+
+     default Optional<Files> findByPath_file(String path) {
+          return null;
+     }
 
 }

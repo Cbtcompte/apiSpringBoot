@@ -1,6 +1,6 @@
 DESIGN 
 
-Version 1.0
+Version 2
 
 <p id="image" align="center">
   <img src="../projet_pdl.png" alt="Présentation du projet">
@@ -10,8 +10,33 @@ Version 1.0
 
  Cet outil de visualisation prendra en entrée un fichier texte dans un format spécifique à l'outil et affichera le contenu de ce fichier sous la forme d'un diagramme à bulles.
 
-### Explication du projet
+# Présentation interface du projet
+([INTERFACE ACCEUIL](../Capture%20d'écran%202023-11-27%20115137.png))
+Cette image présente l'interface d'accueil. 
+La partie droite vous présente la possibilité de choisir un template de diagramme
+pour générer votre graphe ou alors charger un fichier de type json.
+La partie gauche vous donne accès au compte de client avec des informations sur le profil et la possibilité de se déconnecter
 
+([INTERFACE Diagramme](../Capture%20d'écran%202023-11-27%20124708.png))
+C'est sur cette interface que le diagramme est visualisé. 
+La partie de gauche ne change pas, elle reste disponible pour permettre au client de se déconnecter 
+ou accéder aux informations de son compte.
+La partie droite es divisée en deux parties :
+- la première est celle ou le diagramme est affiché avec des options d'ajout ou de retrait de bulles et des options d'exports
+- la deuxième permet une modification du diagramme : taille des bulles, couleurs, etc.
+
+
+
+# Notion de template
+
+Un template dans notre application est une option que nous donnons à l'utilisateur pour lui permettre de créer sur place son diagramme sans se soucier de préciser
+les couleurs ou autres paramètres de forme. Quand un template est choisi, les données de forme sont conservées, mais celles de fond sont celles
+fournies par l'utilisateur
+Générer un diagramme implique donc deux cas :
+1. On charge un fichier avec toutes les informations de fond et forme qui seront utilisés 
+2. On utilise un diagramme template et dans ce cas toutes les informations de fond données dans le fichier chargé sont ignorés et remplacés par ceux du diagramme
+
+# Diagrammes
 ## Diagramme de cas d'utilisation
 <p id="usecase">
 <p id="image" align="center">
