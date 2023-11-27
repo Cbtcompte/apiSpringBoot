@@ -1,15 +1,11 @@
 
 package springboot.pdl.pdl.projet.services;
 
-import org.hibernate.annotations.SecondaryRow;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import springboot.pdl.pdl.projet.dtos.FilesDto;
 import springboot.pdl.pdl.projet.models.Files;
 import springboot.pdl.pdl.projet.repository.FileRepository;
-import springboot.pdl.pdl.projet.services.interfaces.AbstractService;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +22,7 @@ public class FileService {
     }
 
     public void uploadFileSystem(MultipartFile file) throws IllegalStateException, IOException{
-        file.transferTo(new File( "C:\\Users\\Joëlla_T\\Desktop\\COURS\\PDL\\TP\\pdl_project_groupe_4\\Uploads\\"+ file.getOriginalFilename()));
+        file.transferTo(new File("C:\\Users\\Joëlla_T\\Desktop\\COURS\\PDL\\TP\\pdl_project_groupe_4\\Uploads\\"+ file.getOriginalFilename()));
     }
 
     public Files uploadFileBase (MultipartFile file){
