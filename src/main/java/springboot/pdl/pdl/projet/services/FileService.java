@@ -32,8 +32,6 @@ public class FileService {
         if (!directory.exists()) {
             directory.mkdirs();
         }
-
-        // Enregistrez le fichier dans le répertoire local
         file.transferTo(new File(uploadPath + file.getOriginalFilename()));
     }
 
@@ -49,7 +47,6 @@ public class FileService {
             // Enregistrez le fichier dans le répertoire local
             file.transferTo(new File(uploadPath + file.getOriginalFilename()));
 
-            // Créez l'objet Files et enregistrez-le en base de données
             Files files = new Files(file.getOriginalFilename(), true);
             return fileRepository.save(files);
         } catch (IOException e) {
