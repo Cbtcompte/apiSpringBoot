@@ -25,26 +25,28 @@ public class FileService {
      * */
     public void uploadFileSystem(MultipartFile file) throws IllegalStateException, IOException {
         // Changez le chemin en fonction de votre configuration
-        String uploadPath = "C:\\Users\\Joëlla_T\\Desktop\\Uploads\\";
+        String uploadPath = "C:\\Users\\Joëlla_T\\Desktop\\COURS\\PDL\\TP\\pdl_project_groupe_4\\Uploads\\";
 
-        // Assurez-vous que le répertoire existe, sinon créez-le
         File directory = new File(uploadPath);
         if (!directory.exists()) {
             directory.mkdirs();
         }
-        file.transferTo(new File(uploadPath + file.getOriginalFilename()));
+
+        if (file.getOriginalFilename() != null && file.getOriginalFilename().toLowerCase().endsWith(".json")) {
+            file.transferTo(new File(uploadPath + file.getOriginalFilename()));
+        } else {
+            throw new IllegalArgumentException("Le fichier doit être au format JSON.");
+        }
     }
+
 
     /*
      * On récupère du local directory le fichier à charger et on stocke le path dans la base de données
      * Notez que vous devez changer le chemin en fonction de votre machine
      * */
     public Files uploadFileBase(MultipartFile file) {
-        // Changez le chemin en fonction de votre configuration
         String uploadPath = "C:\\Users\\Joëlla_T\\Desktop\\COURS\\PDL\\TP\\pdl_project_groupe_4\\Uploads\\";
-
         try {
-            // Enregistrez le fichier dans le répertoire local
             file.transferTo(new File(uploadPath + file.getOriginalFilename()));
 
             Files files = new Files(file.getOriginalFilename(), true);
