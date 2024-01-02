@@ -3,112 +3,88 @@
         "id" : 1,
         "data" : "data",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "diamond",
+        "isParent" : true,
         "parent" : null
     },
     {
         "id" : 2,
         "data" : "data_fils_1",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "diamond",
+        "isParent" : true,
         "parent" : 1
     },
     {
         "id" : 3,
         "data" : "data_fils_2",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "circle",
+        "isParent" : false,
         "parent" : 1
     },
     {
         "id" : 4,
-        "data" : "data_fils_3",
+        "data" : "data_7",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "circle",
+        "isParent" : false,
         "parent" : 1
     },
     {
-        "id" : 6,
-        "data" : "data_fils_2_1",
+        "id" : 5,
+        "data" : "data_8",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "circle",
+        "isParent" : false,
         "parent" : 2
+    },
+    {
+        "id" : 6,
+        "data" : "data_9",
+        "couleur" : "#41D55",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "circle",
+        "isParent" : false,
+        "parent" : 7
     },
     {
         "id" : 7,
-        "data" : "data_fils_2_2",
+        "data" : "data3",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 2
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "diamond",
+        "isParent" : true,
+        "parent" : 7
     },
     {
         "id" : 8,
-        "data" : "data_fils_2_3",
+        "data" : "data4",
         "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
+        "tailleBulle" : 60,
+        "tailleLabel" : 15,
+        "fontFamily" : "sans-serif",
+        "forme" : "circle",
+        "isParent" : false,
         "parent" : 2
-    },
-    {
-        "id" : 9,
-        "data" : "data_fils_2_4",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 2
-    },
-    {
-        "id" : 10,
-        "data" : "data_fils_3_1",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 3
-    },
-    {
-        "id" : 11,
-        "data" : "data_fils_3_2",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 3
-    },
-    {
-        "id" : 12,
-        "data" : "data_fils_3_3",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 3
-    },
-    {
-        "id" : 13,
-        "data" : "data_fils_4_1",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 4
-    },
-    {
-        "id" : 14,
-        "data" : "data_fils_4_2",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 4
-    },
-    {
-        "id" : 15,
-        "data" : "data_fils_4_3",
-        "couleur" : "#41D55",
-        "taille" : 15,
-        "police" : "calibri",
-        "parent" : 4
     }
 ]
