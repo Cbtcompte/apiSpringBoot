@@ -27,7 +27,7 @@ public class FileChargementController {
     /*
     *   On travaille ici sur le chargement dans le local directory
     *  */
-    @PostMapping(path = "/uploadfilesystem", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.ALL_VALUE)
+    @PostMapping(path = "/uploadfilesystem", consumes = MediaType.MULTIPART_FORM_DATA_VALUE , produces = MediaType.ALL_VALUE)
     public void uploadfileSystem(@RequestParam("file")MultipartFile file ) throws IllegalStateException, IOException{
         fileService.uploadFileSystem(file);
     }
@@ -47,7 +47,6 @@ public class FileChargementController {
      *  */
     @PostMapping(path = "/getfile/{file_path}", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.ALL_VALUE)
     public Files getFile(@PathVariable String file_path){
-
         return fileService.getFileByPath(file_path);
     }
 
@@ -57,7 +56,6 @@ public class FileChargementController {
      *  */
     @PostMapping(path = "/getfilelist", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.ALL_VALUE)
     public List<Files> getFiles(){
-
         return fileService.getFilesList();
     }
 
