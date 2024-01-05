@@ -1,10 +1,9 @@
 package springboot.pdl.pdl.projet.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import springboot.pdl.pdl.projet.models.Files;
-import springboot.pdl.pdl.projet.services.FileService;
+import springboot.pdl.pdl.projet.services.FileService_1;
 import org.springframework.http.MediaType;
 
 import java.io.IOException;
@@ -18,9 +17,9 @@ import java.util.List;
 
 public class FileChargementController {
 
-    private final FileService fileService;
+    private final FileService_1 fileService;
 
-    public FileChargementController(FileService fileService) {
+    public FileChargementController(FileService_1 fileService) {
         this.fileService = fileService;
     }
 

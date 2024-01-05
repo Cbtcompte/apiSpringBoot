@@ -1,5 +1,7 @@
 package springboot.pdl.pdl.projet.dtos;
 
+import java.time.Instant;
+
 import lombok.Builder;
 import lombok.Data;
 import springboot.pdl.pdl.projet.models.Files;
@@ -9,55 +11,13 @@ import springboot.pdl.pdl.projet.models.Files;
 public class FilesDto {
     private Long id;
     private String nom;
-    private String path_file;
+    private String type;
     private Float taille;
     private Boolean visibility;
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNom() {
-        return this.nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public Float getTaille() {
-        return this.taille;
-    }
-
-    public void setTaille(Float taille) {
-        this.taille = taille;
-    }
-
-    public Boolean isVisibility() {
-        return this.visibility;
-    }
-
-    public Boolean getVisibility() {
-        return this.visibility;
-    }
-
-    public void setVisibility(Boolean visibility) {
-        this.visibility = visibility;
-    }
-
-        public String getPath_file() {
-        return this.path_file;
-    }
-
-    public void setPath_file(String path_file) {
-        this.path_file = path_file;
-    }
+    private Instant created_at;
+    private Instant updated_at;
     
-    public FilesDto fromEntity(Files files)
+    public static FilesDto fromEntity(Files files)
     {
         if(files == null){
             return null;
@@ -65,23 +25,28 @@ public class FilesDto {
 
         return FilesDto.builder()
                 .id(files.getId())
+                .type(files.getType())
                 .taille(files.getTaille())
                 .nom(files.getNom())
                 .visibility(files.getVisibility())
+                .created_at(files.getCreated_at())
+                .updated_at(files.getUpdated_at())
                 .build();
     }
 
-    public  Files toEntity(FilesDto filesDto){
+    public static Files toEntity(FilesDto filesDto){
         if(filesDto == null){
             return null;
         }
 
-        Files files = new Files( nom, true);
+        Files files = new Files();
         files.setId(filesDto.getId());
         files.setNom(filesDto.getNom());
         files.setVisibility(filesDto.getVisibility());
-        files.setPath_file(filesDto.getPath_file());
+        files.setType(filesDto.getType());
         files.setTaille(filesDto.getTaille());
+        files.setCreated_at(Instant.now());
+        files.setUpdated_at(Instant.now());
 
         return files;
     }

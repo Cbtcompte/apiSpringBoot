@@ -1,5 +1,6 @@
 package springboot.pdl.pdl.projet.dtos;
 
+import java.time.Instant;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,15 +14,19 @@ import springboot.pdl.pdl.projet.models.User;
 public class UserDto {
 
     private Long id;
-    private String nom;
-    private String prenom;
+    private String name;
     private String email;
-    private String telephone;
+    private String token;
+    private Instant created_at;
+    private Instant updated_at;
 
     @JsonIgnore
     private List<FilesDto> filesdto;
+
+    @JsonIgnore
+    private String password;
     
-    public UserDto fromEntity(User user){
+    public static UserDto fromEntity(User user){
         if(user == null){
             return null;
         }
@@ -29,23 +34,27 @@ public class UserDto {
         return UserDto.builder()
                 .id(user.getId())
                 .email(user.getEmail())
-                .nom(user.getNom())
-                .prenom(user.getPrenom())
-                .telephone(user.getTelephone())
+                .name(user.getName())
+                .token(user.getToken())
+                .password(user.getPassword())
+                .created_at(user.getCreated_at())
+                .updated_at(user.getUpdated_at())
                 .build();
     }
 
-    public User toEntity(UserDto userdto){
+    public static User toEntity(UserDto userdto){
         if(userdto == null){
             return null;
         }
 
         User user = new User();
         user.setEmail(userdto.getEmail());
-        user.setTelephone(userdto.getTelephone());
-        user.setNom(userdto.getNom());
-        user.setPrenom(userdto.getPrenom());
+        user.setName(userdto.getName());
+        user.setToken(userdto.getToken());
         user.setId(userdto.getId());
+        user.setPassword(userdto.getPassword());
+        user.setCreated_at(Instant.now());
+        user.setUpdated_at(Instant.now());
         return user;
     }
 }

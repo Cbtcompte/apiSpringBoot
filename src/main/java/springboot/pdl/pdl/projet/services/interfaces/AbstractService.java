@@ -1,5 +1,9 @@
 package springboot.pdl.pdl.projet.services.interfaces;
 
+import java.util.Collection;
+
+import org.springframework.http.ResponseEntity;
+
 public interface AbstractService<V, I> {
     /**
      * Cette méthode permet d'enregistrer yn diagramme dans la base de données
@@ -7,9 +11,13 @@ public interface AbstractService<V, I> {
      * @return Diagramme instance
      */
 
-    public V create(V v);
+    public ResponseEntity<V> create(V v);
 
-    public V findById(I v);
+    public ResponseEntity<V> findById(I i);
 
-    public V findAll(V v);
+    public ResponseEntity<V> findAll(V v);
+
+    public ResponseEntity<Collection<V>> get();
+
+    public ResponseEntity<V> put(I i, V v);
 }

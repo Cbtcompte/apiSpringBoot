@@ -12,20 +12,29 @@ import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Data;
 
+@Entity
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Entity
 @Table(name = "diagrammes")
 public class Diagramme extends AbstractClass{
     
     @Column(name = "couleur")
     private String couleur;
 
-    @Column(name = "police")
-    private String police;
+    @Column(name = "tailleBulle")
+    private double tailleBulle;
 
-    @Column(name = "taille")
-    private float taille;
+    @Column(name = "formeParent")
+    private String formeParent;
+
+    @Column(name = "formeEnfant")
+    private String formeEnfant;
+
+    @Column(name = "fontFamily")
+    private String fontFamily;
+
+    @Column(name = "fontSize")
+    private double fontSize;
 
     @ManyToMany
     @JoinTable(
@@ -43,27 +52,51 @@ public class Diagramme extends AbstractClass{
         this.couleur = couleur;
     }
 
-    public String getPolice() {
-        return this.police;
-    }
-
-    public void setPolice(String police) {
-        this.police = police;
-    }
-
-    public float getTaille() {
-        return this.taille;
-    }
-
-    public void setTaille(float taille) {
-        this.taille = taille;
-    }
-
     public Iterator<Files> getFiles() {
         return this.files.iterator();
     }
 
     public void setFiles(List<Files> files) {
         this.files = files;
+    }
+
+    public String getFormeParent() {
+        return this.formeParent;
+    }
+
+    public void setFormeParent(String formeParent) {
+        this.formeParent = formeParent;
+    }
+
+    public String getFormeEnfant() {
+        return this.formeEnfant;
+    }
+
+    public void setFormeEnfant(String formeEnfant) {
+        this.formeEnfant = formeEnfant;
+    }
+
+    public double getTailleBulle() {
+        return this.tailleBulle;
+    }
+
+    public void setTailleBulle(double tailleBulle) {
+        this.tailleBulle = tailleBulle;
+    }
+
+    public String getFontFamily() {
+        return this.fontFamily;
+    }
+
+    public void setFontFamily(String fontFamily) {
+        this.fontFamily = fontFamily;
+    }
+
+    public double getFontSize() {
+        return this.fontSize;
+    }
+
+    public void setFontSize(double fontSize) {
+        this.fontSize = fontSize;
     }
 }

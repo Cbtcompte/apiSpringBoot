@@ -12,20 +12,29 @@ import lombok.EqualsAndHashCode;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = true)
-@Table(name = "data")
+@Table(name = "bubble")
 public class Bubble extends AbstractClass{
     
-    @Column(name = "libelle") 
-    private String libelle;
+    @Column(name = "data") 
+    private String data;
 
     @Column(name = "couleur") 
     private String couleur;
 
-    @Column(name = "police") 
-    private String police;
+    @Column(name = "forme") 
+    private String forme;
 
-    @Column(name = "taille") 
-    private float taille;
+    @Column(name = "fontFamily") 
+    private String fontFamily;
+
+    @Column(name = "tailleLabel") 
+    private float TailleLabel;
+
+    @Column(name = "tailleBubble") 
+    private float TailleBubble;
+
+    @Column(name = "isParent") 
+    private boolean isParent;
 
     @OneToOne(optional = true)
     @JoinColumn(
@@ -36,36 +45,12 @@ public class Bubble extends AbstractClass{
     @JoinColumn(name = "file_id")
     private Files file;
 
-    public String getLibelle() {
-        return this.libelle;
-    }
-
-    public void setLibelle(String libelle) {
-        this.libelle = libelle;
-    }
-
     public String getCouleur() {
         return this.couleur;
     }
 
     public void setCouleur(String couleur) {
         this.couleur = couleur;
-    }
-
-    public String getPolice() {
-        return this.police;
-    }
-
-    public void setPolice(String police) {
-        this.police = police;
-    }
-
-    public float getTaille() {
-        return this.taille;
-    }
-
-    public void setTaille(float taille) {
-        this.taille = taille;
     }
 
     public Bubble getParent() {
@@ -84,4 +69,51 @@ public class Bubble extends AbstractClass{
         this.file = file;
     }    
 
+    public String getData() {
+        return this.data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getForme() {
+        return this.forme;
+    }
+
+    public void setForme(String forme) {
+        this.forme = forme;
+    }
+
+    public String getFontFamily() {
+        return this.fontFamily;
+    }
+
+    public void setFontFamily(String fontFamily) {
+        this.fontFamily = fontFamily;
+    }
+
+    public float getTailleLabel() {
+        return this.TailleLabel;
+    }
+
+    public void setTailleLabel(float TailleLabel) {
+        this.TailleLabel = TailleLabel;
+    }
+
+    public float getTailleBubble() {
+        return this.TailleBubble;
+    }
+
+    public void setTailleBubble(float TailleBubble) {
+        this.TailleBubble = TailleBubble;
+    }
+
+    public boolean getIsParent() {
+        return this.isParent;
+    }
+
+    public void setIsParent(boolean isParent) {
+        this.isParent = isParent;
+    }
 }

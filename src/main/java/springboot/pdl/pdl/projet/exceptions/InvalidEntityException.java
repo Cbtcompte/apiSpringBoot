@@ -1,7 +1,6 @@
 package springboot.pdl.pdl.projet.exceptions;
 
 import java.util.Map;
-import java.util.Iterator;
 
 public class InvalidEntityException extends RuntimeException{
     
@@ -42,8 +41,8 @@ public class InvalidEntityException extends RuntimeException{
         this.errorCodes = errorCodes;
     }
 
-    public Iterator<String> getMessageErrors() {
-        return this.messageErrors.values().iterator();
+    public Map<String, String> getMessageErrors() {
+        return this.messageErrors;
     }
 
     public void setMessageErrors(Map<String, String> messageErrors) {
